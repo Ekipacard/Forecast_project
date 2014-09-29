@@ -1,0 +1,34 @@
+<h1> Weather </h1>
+<p> Quoi de neuf sous le soleil ? </p> 
+
+<p></p>
+
+<p> <u>New York</u> </p>
+
+<FONT COLOR="#0E40CA"><%= @response["currently"]["summary"] %></FONT>
+<p>Temperature : <b><%= @response["currently"]["temperature"] %></b></p>
+
+<p></p>
+
+<p> <u>Paris</u> </p>
+<FONT COLOR="#0E40CA"><%= @response2["currently"]["summary"] %></FONT>
+<p>Temperature : <b><%= @response2["currently"]["temperature"] %></b></p>
+
+<br/>
+<br/>
+<br/>
+<p></p>
+
+
+<%= form_tag("/forecastpage/add", :method=>"post") do %>
+  <%= text_field_tag(:place) %>
+  <%= submit_tag("Search Weather", :class=>"btn") %>
+
+<p> <u>Resultat recherche</u> </p>
+<FONT COLOR="#0E40CA"><%= @response3 %></FONT>  
+<% end %>
+
+
+
+
+
