@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20140922171731) do
 
-  create_table "locations", force: true do |t|
+  create_table "places", force: true do |t|
     t.string   "city"
     t.datetime "created_at"
     t.datetime "updated_at"

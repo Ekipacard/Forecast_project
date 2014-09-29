@@ -9,11 +9,7 @@ class Weather < ActiveRecord::Base
 
   		base_uri "api.forecast.io"
   		format :json
-
       
-        
-
-
   		def self.get_weather(lat,long)
   			puts "/forecast/#{@apiKey}/#{lat},#{long}"
     		@response = get("/forecast/#{@apiKey}/#{lat},#{long}?units=si")

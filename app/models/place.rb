@@ -1,9 +1,10 @@
 require 'json'
 require 'rubygems'
-class Location < ActiveRecord::Base
+class Place < ActiveRecord::Base
 	include HTTParty
   	
   	attr_accessor :city
+    #field :city    
 
   	format :json	
   	base_uri "maps.googleapis.com"
